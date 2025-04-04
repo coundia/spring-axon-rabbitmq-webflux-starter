@@ -44,14 +44,75 @@ mvn spring-boot:run
 
 Once the application is running, you can access the **Swagger UI** documentation here:
 
-🔗 [http://127.0.0.1:8081/swagger-ui/index.html#/](http://127.0.0.1:8081/swagger-ui/index.html#/)
+http://127.0.0.1:8090/webjars/swagger-ui/index.html
 
 ## 📁 Project Structure
 
 ```
-         
-```
+  ----------------------------------------------------------------
+❰pcoundia❙~/projects/spring-axon-rabbitmq-webflux-starter(git✱✱➜main)❱✘≻ tree -L 7 src/
+src/
+├── main
+│   ├── java
+│   │   └── com
+│   │       ├── generated
+│   │       └── pcoundia
+│   │           ├── ProductCommandApplication.java
+│   │           ├── products
+│   │           │   ├── application
+│   │           │   │   ├── Mapper
+│   │           │   │   ├── command
+│   │           │   │   ├── dto
+│   │           │   │   ├── event
+│   │           │   │   ├── projections
+│   │           │   │   ├── query
+│   │           │   │   └── queryHandler
+│   │           │   ├── domain
+│   │           │   │   ├── aggregate
+│   │           │   │   ├── exception
+│   │           │   │   ├── useCase
+│   │           │   │   └── valueObject
+│   │           │   ├── infrastructure
+│   │           │   │   ├── entity
+│   │           │   │   └── repository
+│   │           │   └── presentation
+│   │           │       └── controller
+│   │           └── shared
+│   │               ├── Presentation
+│   │               │   └── StatusController.java
+│   │               └── infrastructure
+│   │                   ├── axon
+│   │                   ├── config
+│   │                   ├── exception
+│   │                   ├── mongodb
+│   │                   ├── rabbitMq
+│   │                   └── security
+│   └── resources
+│       ├── application-test.properties
+│       ├── application.properties
+│       ├── schema-axon.sql
+│       └── schema-domain.sql
+└── test
+    └── java
+        └── com
+            └── pcoundia
+                ├── ProductCommandApplicationTests.java
+                ├── infrastructure
+                │   └── controller
+                │       ├── AddProductControllerTest.java
+                │       ├── DeleteProductControllerTest.java
+                │       ├── StatusControllerTest.java
+                │       └── UpdateProductNameProductControllerTests.java
+                └── shared
+                    ├── BaseIntegrationTests.java
+                    └── BaseUnitTests.java
 
+42 directories, 13 files
+       
+```
+# 🚀 API  Documentation Swagger UI
+
+![api.png](docs/api.png)
 ## 🔹 Notes
 
 - The application follows the **CQRS pattern**, separating command and query models.

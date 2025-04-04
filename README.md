@@ -1,4 +1,4 @@
-# spring-axon-rabbitmq-starter
+# spring-axon-rabbitmq-webflux-starter
 
 This project is a **Spring Boot** application using **Axon Framework**, **RabbitMQ**, and **PostgreSQL**, following *
 *DDD** (Domain-Driven Design) and **CQRS** (Command Query Responsibility Segregation) principles.
@@ -6,8 +6,8 @@ This project is a **Spring Boot** application using **Axon Framework**, **Rabbit
 ## 📥 Clone the Project
 
 ```sh
-git clone https://github.com/coundia/spring-axon-rabbitmq-starter.git
-cd spring-axon-rabbitmq-starter
+git clone https://github.com/coundia/spring-axon-rabbitmq-webflux-starter
+cd spring-axon-rabbitmq-webflux-starter
 ```
 
 ## 📌 Prerequisites
@@ -25,7 +25,7 @@ Before running the application, make sure you have installed:
 Run the following command to start the Docker containers:
 
 ```sh
-docker compose -f src/main/docker/main.yml up -d
+docker compose -f docker/main.yml up -d
 ```
 
 ### 2️⃣ Run Tests
@@ -49,12 +49,7 @@ Once the application is running, you can access the **Swagger UI** documentation
 ## 📁 Project Structure
 
 ```
-├── src
-│   ├── main
-│   │   ├── docker         # Docker configuration (PostgreSQL, RabbitMQ)
-│   │   ├── java           # Java source code
-│   │   ├── resources      # Configuration files (application.properties, etc.)
-│   ├── test               # Unit and integration tests
+         
 ```
 
 ## 🔹 Notes

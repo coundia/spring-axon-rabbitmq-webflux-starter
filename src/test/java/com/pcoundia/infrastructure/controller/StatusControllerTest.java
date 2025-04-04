@@ -12,7 +12,7 @@ public class StatusControllerTest extends BaseIntegrationTests {
             .expectStatus().isOk()
             .expectBody()
             .jsonPath("$.code").isEqualTo(1)
-            .jsonPath("$.message").isEqualTo("I am Gateway.")
+            .jsonPath("$.message").isEqualTo("I am Command.")
         ;
     }
 

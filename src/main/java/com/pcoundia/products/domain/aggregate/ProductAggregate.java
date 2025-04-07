@@ -66,6 +66,7 @@ public class ProductAggregate {
         apply(new ProductCreatedEvent(this.getId().value(), command.getPrice(), command.getName()));
     }
 
+
     @CommandHandler
     public ProductAggregate(DeleteProductCommand command) {
         this.id = ProductId.create(UUID.randomUUID().toString());

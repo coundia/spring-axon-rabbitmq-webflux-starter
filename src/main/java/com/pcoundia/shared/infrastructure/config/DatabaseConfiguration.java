@@ -27,9 +27,10 @@ import java.util.BitSet;
 import java.util.List;
 
 @Configuration
-@EnableR2dbcRepositories({ "com.pcoundia.products.infrastructure.repository" })
+@EnableR2dbcRepositories({ "com.pcoundia.products.infrastructure.repository,com.pcoundia.sales.infrastructure.repository" })
 @EnableTransactionManagement
 @EnableConfigurationProperties(H2ConsoleProperties.class)
+
 public class DatabaseConfiguration {
 
     private static final Logger LOG = LoggerFactory.getLogger(DatabaseConfiguration.class);

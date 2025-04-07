@@ -44,7 +44,7 @@ public class DeleteProductController {
             .subscribeOn(Schedulers.boundedElastic())
             .flatMap(foundProduct -> {
                 if (foundProduct == null) {
-                    return Mono.error(new ProductNotFoundException("Product not found with id: " + id));
+                    return Mono.error(new ProductNotFoundException(id));
                 }
                 return Mono.fromFuture(() -> commandGateway.send(new DeleteProductCommand(productId)))
                     .subscribeOn(Schedulers.boundedElastic());
